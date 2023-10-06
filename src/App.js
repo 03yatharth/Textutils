@@ -1,10 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Navbar from "./components/Navbar";
 import Textarea from "./components/Textarea";
-import About from "./components/About";
+// import About from "./components/About";
 function App() {
   const [mode, setMode] = useState("light");
   const [navMode, setNavMode] = useState("#0d6efd");
@@ -23,18 +23,25 @@ function App() {
   };
   return (
     <>
-      <Router>
-        <Navbar title="textutils" navMode={navMode} mode={mode} />
-        <Routes>
-          <Route
+      <Navbar title="textutils" navMode={navMode} mode={mode} />
+      <div className="container">
+        <Textarea
+          heading="Enter the text in below textbox"
+          mode={mode}
+          toggleMode={toggleMode}
+        />
+      </div>
+      {/* <Router> */}
+      {/* <Routes> */}
+      {/* <Route
             path="/About"
             element={
               <div className="container my-3">
                 <About />
               </div>
             }
-          />
-          <Route
+          /> */}
+      {/* <Route
             path="/"
             element={
               <div className="container">
@@ -45,9 +52,9 @@ function App() {
                 />
               </div>
             }
-          />
-        </Routes>
-      </Router>
+          /> */}
+      {/* </Routes>
+      </Router> */}
     </>
   );
 }

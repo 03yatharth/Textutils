@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 export default function Navbar(props) {
   return (
    
@@ -11,7 +11,7 @@ export default function Navbar(props) {
           {props.title}
         </link> */}
 
-        <Link to="/" className="navbar-brand">{props.title}</Link>
+        {/* <Link to="/" className="navbar-brand">{props.title}</Link> */}
 
         <button
           className="navbar-toggler"
@@ -27,16 +27,16 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              {/* <link className="nav-link active"  to="/">
-                Home
-              </link> */}
-              <Link to="/" className="nav-link active">Home</Link>
+              <a className="nav-link active"  href="#">
+                Textutils
+              </a>
+              {/* <Link to="/" className="nav-link active">Home</Link> */}
             </li>
             <li className="nav-item">
-              {/* <link className="nav-link" to="/About">
-                About
-              </link> */}
-              <Link to="/About"  className="nav-link">About</Link>
+              <a className="nav-link" href="#">
+                Home
+              </a>
+              {/* <Link to="/About"  className="nav-link">About</Link> */}
             </li>
           </ul>
           {/* <form className="d-flex" role="search">
