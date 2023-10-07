@@ -42,15 +42,15 @@ export default function Textarea(props) {
         ></textarea>
       </div>
 
-      <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+      <button className="btn btn-primary mx-2" disabled={text.length===0} onClick={handleUpClick}>
         Convert to upperCase
       </button>
-      <button className="btn btn-primary mx-2" onClick={handleLoClick}>
+      <button className="btn btn-primary mx-2" disabled={text.length===0} onClick={handleLoClick}>
         Convert to lowerCase
       </button>
       <div className="container">
         <h2>Your text summury</h2>
-        <p>{text.split(" ").length} words</p>
+        <p>{text.split(/\s/).filter((element)=>{return element.length!==0}).length} words</p>
         <p>{text.length} characters</p>
       </div>
       <button className="btn btn-primary mx-2" onClick={toggleMode}>
