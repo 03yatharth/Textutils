@@ -42,10 +42,10 @@ export default function Textarea(props) {
         ></textarea>
       </div>
 
-      <button className="btn btn-primary mx-2 my-2" disabled={text.length===0} onClick={handleUpClick}>
+      <button className="btn btn-primary mx-2 my-7" disabled={text.length===0} onClick={handleUpClick}>
         Convert to upperCase
       </button>
-      <button className="btn btn-primary mx-2 my-2" disabled={text.length===0} onClick={handleLoClick}>
+      <button className="btn btn-primary mx-2 my-7" disabled={text.length===0} onClick={handleLoClick}>
         Convert to lowerCase
       </button>
       <div className="container">
